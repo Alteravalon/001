@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			header{
+				background: rgba(0,0,0,0.6);
+				height: 4vw;
+				display: flex;
+				justify-content: space-between;
+			}
+			#title{
+				font-size: 0.8vw;
+				color: orange;
+				padding-left: 2vw;
+			}
+			nav{
+				height: 4vw;
+			}
+			nav ul{
+				display: flex;
+				justify-content: right;
+				margin-left: 5vw;
+			}
+			nav ul li{
+				width: 20vw;
+				height: 4vw;
+				text-align: center;
+				font-size: 1.3vw;
+				list-style: none;
+				color: white;
+				line-height: 4vw;
+			}
+			nav ul li:hover{
+				background:rgba(0,0,0,0.5);
+				border: 0.2vw outset coral;
+				cursor: pointer;
+				box-sizing: border-box;
+				line-height: 3.5vw;
+			}
+			#logo img{
+				height: 4vw;	
+			}
+			body{
+				animation: anima 18s infinite linear;
+			}
+			@keyframes anima{
+				0%{
+					background: url(img/5dd18826-0a96-41b7-b30b-772521e62dd4.png) no-repeat fixed center;
+					background-size: 100%;
+				}
+				30%{
+					background: url(img/5dd18826-0a96-41b7-b30b-772521e62dd4.png) no-repeat fixed center;
+					background-size: 110%;
+				}
+				35%{
+					background: url(img/2b854c57-b87f-47eb-a1fc-f11cbd42085c.png) no-repeat fixed center;
+					background-size: 111.6%;
+				}
+				65%{
+					background: url(img/2b854c57-b87f-47eb-a1fc-f11cbd42085c.png) no-repeat fixed center;
+					background-size: 121.6%;
+				}
+				70%{
+					background: url(img/7448fca0-af94-40b9-a6b9-96237c099629.png) no-repeat fixed center;
+					background-size: 123.2%;
+				}
+				100%{
+					background: url(img/7448fca0-af94-40b9-a6b9-96237c099629.png) no-repeat fixed center;
+					background-size: 133.2%
+				}
+			}
+			main{
+				display: flex;
+				
+			}
+			article{
+				width: 65vw;
+				display: flex;
+				justify-content: flex-end;
+			}
+			section{
+				margin-right: 2vw;
+				margin-top: 3vw;
+				width: 50vw;
+				background: rgba(247,252,249,0.8);
+				box-shadow: 0 0 0.8vw -0.3vw black;
+				border-radius: 0.5vw;
+			}
+			#one,#two,#three,#four{
+				width: 50vw;
+				height: 40vw;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				box-shadow: 0 0.6vw 1vw -1.1vw black;
+				
+			}
+			.gamename{
+				height: 3vw;
+				background: #4FA9C4;
+				font-size: 2vw;
+				color: white;
+				line-height: 3vw;
+				padding: 0 2vw;
+				border-radius:0.3vw;
+			}
+			.tag{
+				width: 12vw;
+				height: 3vw;
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				
+			}
+			.tag p{
+				height: 1.2vw;
+				font-size: 0.9vw;
+				line-height: 1.2vw;
+				color: white;
+				background:dimgrey;
+				border-radius:1vw;
+				padding: 0 0.3vw;
+			}
+			.p{
+				width: 45vw;
+				height: 28vw;
+				background: rgba(250,250,250,0.5);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 0.5vw;
+				box-shadow: 0 0 1vw -0.3vw black;
+			}
+			.pp{
+				position: relative;
+				width: 40vw;
+				height: 24vw;
+				border: 0.1vw solid black;
+				overflow: hidden;
+			}
+			.pp img{
+				width:100%;
+			}
+			.ps{
+				height: 100%;
+				background: rgb(0,0,0,0.4);
+				position: absolute;
+				top:-100%;
+				font-size: 1.5vw;
+				font-style: italic;
+				color: rgba(250,250,250,0.8);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 0.6s;
+			}
+			.ps p{
+				width: 90%;
+			}
+			/* .pp:hover img{
+				transform: scale(1.05);
+				transition: 0.5s;
+			} */
+			/* .pp:hover .ps{
+				top: 0;
+				transition: 0.3s;
+				transition-timing-function: linear;
+			} */
+			aside{
+				/* display: flex;
+				flex-direction: column; */
+				
+			}
+			#menu{
+				width: 30vw;
+				height: 40vw;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			#form1{
+				margin-top: 3vw;
+				width: 24vw;
+				height: 4vw;
+				background: rgba(0,0,0,0.6);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 0.5vw;
+			}
+			.search{
+				width: 22vw;
+				height: 2.5vw;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.searchp{
+				width: 2.5vw;
+				height: 2.5vw;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #C14844;
+				border-radius: 0.3vw;
+			}
+			.searchs{
+				width: 19vw;
+				height: 2.3vw;
+				font-size: 1vw;
+				color: #FFFFFF;
+				text-indent: 0.5vw;
+				border: 0.1vw solid #C14844;
+				border-radius: 0.3vw;
+				background: transparent;
+			}
+			#form2{
+				width: 24vw;
+				height: 30vw;
+				background: rgba(247,252,249,0.8);
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 0.5vw;
+			}
+			input:focus {
+			    outline:none;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div id="title">
+				<h1>柚子社</h1>
+				<h2>Galgame</h2>
+			</div>
+			<nav>
+				<ul>
+					<li>天神乱漫</li>
+					<li>魔女的夜宴</li>
+					<li>千恋万花</li>
+					<li>RIDDLE JOKER</li>
+				</ul>
+			</nav>
+			<div id="logo">
+			<img src="img/cfec519b03a9e38be6e2e5ae1f351306.jpg">
+			</div>
+		</header>
+		<main>
+			<article>
+				<section>
+					<div id="one">
+						<div class="gamename">
+							<b>天神乱漫</b>
+						</div>
+						<div class="tag">
+							<p>纯爱</p>
+							<p>妹系</p>
+							<p>天降女主</p>
+						</div>
+						<div class="p">
+							<div class="pp" onmouseover="showBox1()" onmouseout="hideBox1()">
+								<img src="img/【初音ミク】恋爱纷纷【天神乱漫OP】.jpg" >
+								<div class="ps" id="ps1">
+									<p>
+									某天，春树在家里突然收到一个既没有写收件人地址、也没有写寄件人，只贴着“生物”字样的奇怪包裹。即使平常麻烦不断的春树，此刻也绝对想不到包裹里是什么。在打开包裹的那一刻，春树惊呆了，竟然是一位“女孩子”被当成包裹邮寄过来了……<br><br>这正是，春樹所得到的『新的不幸』…………不对，是『初次的幸运』、波澜起伏的故事拉开了序幕。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="two">
+						<div class="gamename">
+							<b>魔女的夜宴</b>
+						</div>
+						<div class="tag">
+							<p>魔女</p>
+							<p>超能力</p>
+							<p>恋爱</p>
+						</div>
+						<div class="p">
+							<div class="pp" onmouseover="showBox2()" onmouseout="hideBox2()">
+								<img src="img/柚子社8th「魔女的夜宴」OP%20Movie.jpg" >
+								<div class="ps" id="ps2">
+									<p>
+									“保科柊史”抱有着一个秘密——那就是拥有着“能读取到他人的感情”这种不可思议的力量<br><br>
+									他的同学，“绫地宁宁”也一样，怀抱着无法向她人言喻的秘密——那就是“会不受自己控制地发情”！<br><br>
+									两人本应只是同学的关系，但在某一天，柊史因为意外的事故，看见了冲击性的场景——他看见的居然是，发情的宁宁的ziwei场景！
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="three">
+						<div class="gamename">
+							<b>千恋万花</b>
+						</div>
+						<div class="tag">
+							<p>纯爱</p>
+							<p>奇幻</p>
+							<p>幼刀</p>
+						</div>
+						<div class="p">
+							<div class="pp" onmouseover="showBox3()" onmouseout="hideBox3()">
+								<img src="img/【柚子社】《千恋万花》如果没有攻略任何女主角会产生什么结果？.jpg" >
+								<div class="ps" id="ps3">
+									<p>
+									在一座连公交都不通的深山里，有个叫做“穗织”的小镇。小镇地处偏僻，与周边来往甚少，甚至连城镇的现代化都慢了半拍。也正因如此，穗织镇渐渐发展出了独具特色的地方文化，现如今已成了别具一格的温泉旅游胜地，在全国颇具盛名。<br><br>
+									穗织镇最具人气的观光项目之一，是一把特殊的刀。神刀——丛雨丸。这把刀一直插在岩石之中，无人能将其拔出。<br><br>
+									然而这把拔不出的刀，却被有地将臣折断了！
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="four">
+						<div class="gamename">
+							<b>Riddle Joker</b>
+						</div>
+						<div class="tag">
+							<p>纯爱</p>
+							<p>超能力</p>
+							<p>校园</p>
+						</div>
+						<div class="p">
+							<div class="pp" onmouseover="showBox4()" onmouseout="hideBox4()">
+								<img src="img/RIDDLE%20JOKER%20OP【弹幕复原】.jpg" >
+								<div class="ps" id="ps4">
+									<p>
+									这个世界上有曾经被喻为“超能力”的不可思议力量。这种神秘力量，在20世纪末被发现与一种粒子有关，在将该粒子拆解分析后，人们改变了”超能力”的称呼方式，如今我们称这种能力为『星幽能力』，而这股能力的使用者，被称呼为『星幽使』。<br><br>
+									在这个世界中，存在一位过着平淡无奇生活的一般人『在原晓』。<br><br>
+									但！这也只是暂时假象而已。
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</article>
+			<aside>
+				<div id="menu">
+					<div id="form1">
+						<div class="search">
+							<input type="search" class="searchs" placeholder="">
+							<div class="searchp">
+								<img src="img/搜索%20(2).svg" >
+							</div>
+						</div>
+						
+					</div>
+					<div id="form2">
+						
+					</div>
+				</div>
+			</aside>
+		</main>
+		<footer>
+			
+		</footer>
+		<script type="text/javascript">
+			function showBox1() {
+				document.getElementById("ps1").style.top='0'
+			}
+			function hideBox1() {
+				document.getElementById("ps1").style.top='-100%'
+			}
+			function showBox2() {
+				document.getElementById("ps2").style.top='0'
+			}
+			function hideBox2() {
+				document.getElementById("ps2").style.top='-100%'
+			}
+			function showBox3() {
+				document.getElementById("ps3").style.top='0'
+			}
+			function hideBox3() {
+				document.getElementById("ps3").style.top='-100%'
+			}
+			function showBox4() {
+				document.getElementById("ps4").style.top='0'
+			}
+			function hideBox4() {
+				document.getElementById("ps4").style.top='-100%'
+			}
+		</script>
+	</body>
+</html>
