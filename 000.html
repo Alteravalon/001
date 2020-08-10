@@ -164,20 +164,7 @@
 			.ps p{
 				width: 90%;
 			}
-			/* .pp:hover img{
-				transform: scale(1.05);
-				transition: 0.5s;
-			} */
-			/* .pp:hover .ps{
-				top: 0;
-				transition: 0.3s;
-				transition-timing-function: linear;
-			} */
-			aside{
-				/* display: flex;
-				flex-direction: column; */
-				
-			}
+			
 			#menu{
 				width: 30vw;
 				height: 40vw;
@@ -234,6 +221,7 @@
 			    outline:none;
 			}
 		</style>
+		<script src="change.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<header>
@@ -266,7 +254,7 @@
 							<p>天降女主</p>
 						</div>
 						<div class="p">
-							<div class="pp" onmouseover="showBox1()" onmouseout="hideBox1()">
+							<div class="pp">
 								<img src="img/【初音ミク】恋爱纷纷【天神乱漫OP】.jpg" >
 								<div class="ps" id="ps1">
 									<p>
@@ -286,7 +274,7 @@
 							<p>恋爱</p>
 						</div>
 						<div class="p">
-							<div class="pp" onmouseover="showBox2()" onmouseout="hideBox2()">
+							<div class="pp">
 								<img src="img/柚子社8th「魔女的夜宴」OP%20Movie.jpg" >
 								<div class="ps" id="ps2">
 									<p>
@@ -308,7 +296,7 @@
 							<p>幼刀</p>
 						</div>
 						<div class="p">
-							<div class="pp" onmouseover="showBox3()" onmouseout="hideBox3()">
+							<div class="pp">
 								<img src="img/【柚子社】《千恋万花》如果没有攻略任何女主角会产生什么结果？.jpg" >
 								<div class="ps" id="ps3">
 									<p>
@@ -330,7 +318,7 @@
 							<p>校园</p>
 						</div>
 						<div class="p">
-							<div class="pp" onmouseover="showBox4()" onmouseout="hideBox4()">
+							<div class="pp" >
 								<img src="img/RIDDLE%20JOKER%20OP【弹幕复原】.jpg" >
 								<div class="ps" id="ps4">
 									<p>
@@ -365,29 +353,14 @@
 			
 		</footer>
 		<script type="text/javascript">
-			function showBox1() {
-				document.getElementById("ps1").style.top='0'
-			}
-			function hideBox1() {
-				document.getElementById("ps1").style.top='-100%'
-			}
-			function showBox2() {
-				document.getElementById("ps2").style.top='0'
-			}
-			function hideBox2() {
-				document.getElementById("ps2").style.top='-100%'
-			}
-			function showBox3() {
-				document.getElementById("ps3").style.top='0'
-			}
-			function hideBox3() {
-				document.getElementById("ps3").style.top='-100%'
-			}
-			function showBox4() {
-				document.getElementById("ps4").style.top='0'
-			}
-			function hideBox4() {
-				document.getElementById("ps4").style.top='-100%'
+			let $=document.querySelectorAll.bind(document)
+			for (let i = 0; i < $('.pp').length; i++) {
+				$('.pp')[i].onmouseover=function(){
+					$('.pp .ps')[i].style.top='0'
+				}
+				$('.pp')[i].onmouseout=function(){
+					$('.pp .ps')[i].style.top='-100%'
+				}
 			}
 		</script>
 	</body>
